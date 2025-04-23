@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+         #
+#    By: palu <palu@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/21 14:08:25 by paulmart          #+#    #+#              #
-#    Updated: 2025/04/09 12:44:15 by paulmart         ###   ########.fr        #
+#    Updated: 2025/04/23 22:01:28 by palu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = DiamondTrap
+NAME = Bureaucrat
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -Wshadow -g3 -std=c++98 -I $(INCLUDE_DIR)
