@@ -6,7 +6,7 @@
 /*   By: palu <palu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 12:44:25 by paulmart          #+#    #+#             */
-/*   Updated: 2025/04/24 23:58:08 by palu             ###   ########.fr       */
+/*   Updated: 2025/05/02 16:09:41 by palu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name)
 	}
 	catch (std::exception &e)
 	{
-		std::cout << e.what();
+		std::cerr << e.what() << '\n';
 	}
 }
 
