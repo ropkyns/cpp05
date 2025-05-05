@@ -6,7 +6,7 @@
 /*   By: palu <palu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 12:44:25 by paulmart          #+#    #+#             */
-/*   Updated: 2025/05/05 17:49:10 by palu             ###   ########.fr       */
+/*   Updated: 2025/05/05 15:19:52 by palu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ const char *Bureaucrat::GradeTooLowException::what() const throw()
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &B){
 	if (this != &B){
-		return (*this);
+		static_cast<std::string>(_name) = B._name;
 		_grade = B._grade;
 	}
 	return (*this);
