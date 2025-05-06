@@ -6,7 +6,7 @@
 /*   By: palu <palu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 15:38:18 by palu              #+#    #+#             */
-/*   Updated: 2025/05/05 17:33:37 by palu             ###   ########.fr       */
+/*   Updated: 2025/05/06 18:33:10 by palu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ public:
 	};
 };
 
-std::ostream& operator<<(std::ostream &os, const Bureaucrat &other);
+std::ostream& operator<<(std::ostream &os, const Form &F);
 
 
 #endif
