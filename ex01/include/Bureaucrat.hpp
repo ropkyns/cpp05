@@ -6,7 +6,7 @@
 /*   By: palu <palu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 12:44:35 by paulmart          #+#    #+#             */
-/*   Updated: 2025/04/24 23:55:03 by palu             ###   ########.fr       */
+/*   Updated: 2025/05/08 15:08:17 by palu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <string>
 # include <iostream>
 # include <exception>
+# include "Form.hpp"
 
 class Bureaucrat
 {
@@ -30,8 +31,9 @@ class Bureaucrat
 		Bureaucrat &operator=(const Bureaucrat &);
 		std::string	getName() const;
 		int			getGrade() const;
-		void				incrementGrade();
-		void				decrementGrade();
+		void		incrementGrade();
+		void		decrementGrade();
+		void		beSigned(Form &F);
 
 		class GradeTooHighException : public std::exception
 		{

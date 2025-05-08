@@ -6,7 +6,7 @@
 /*   By: palu <palu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 15:38:39 by palu              #+#    #+#             */
-/*   Updated: 2025/05/06 19:03:01 by palu             ###   ########.fr       */
+/*   Updated: 2025/05/08 15:07:22 by palu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,14 +66,9 @@ std::string Form::getName() const
 void Form::beSigned(Bureaucrat &B)
 {
 	if (B.getGrade() <= _signGrade)
-	{	_isSigned = true;
-		std::cout << B.getName() << " signed " << this->getName() << std::endl;
-	}
+		_isSigned = true;
 	else
-	{
-		std::cout << B.getName() << " couldn't sign " << this->getName() << " because ";
 		throw GradeTooLowException();
-	}
 }
 
 const char	*Form::GradeTooHighException::what() const throw()
