@@ -6,7 +6,7 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 12:44:25 by paulmart          #+#    #+#             */
-/*   Updated: 2025/05/12 14:19:24 by paulmart         ###   ########.fr       */
+/*   Updated: 2025/05/12 17:40:40 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void Bureaucrat::decrementGrade()
 	_grade++;
 }
 
-void Bureaucrat::signForm(Form &F)
+void Bureaucrat::signForm(AForm &F)
 {
 	try
 	{

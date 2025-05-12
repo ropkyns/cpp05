@@ -6,11 +6,11 @@
 #    By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/21 14:08:25 by paulmart          #+#    #+#              #
-#    Updated: 2025/05/12 17:33:27 by paulmart         ###   ########.fr        #
+#    Updated: 2025/05/12 17:37:26 by paulmart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Form
+NAME = Form_Upgraded
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -Wshadow -g3 -std=c++98 -I $(INCLUDE_DIR)
@@ -20,7 +20,7 @@ SRC_DIR = src
 OBJ_DIR = obj
 
 SRC_FILES = \
-	Form.cpp\
+	AForm.cpp\
 	Bureaucrat.cpp\
 	main.cpp
 SRC = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
