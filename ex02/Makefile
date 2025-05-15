@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+         #
+#    By: palu <palu@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/21 14:08:25 by paulmart          #+#    #+#              #
-#    Updated: 2025/05/12 17:37:26 by paulmart         ###   ########.fr        #
+#    Updated: 2025/05/15 15:02:07 by palu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SRC_DIR = src
 OBJ_DIR = obj
 
 SRC_FILES = \
+	ShrubberyCreationForm.cpp\
 	AForm.cpp\
 	Bureaucrat.cpp\
 	main.cpp
