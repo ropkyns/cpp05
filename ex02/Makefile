@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: palu <palu@student.42.fr>                  +#+  +:+       +#+         #
+#    By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/21 14:08:25 by paulmart          #+#    #+#              #
-#    Updated: 2025/05/15 15:02:07 by palu             ###   ########.fr        #
+#    Updated: 2025/05/16 16:47:37 by paulmart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,8 @@ SRC_DIR = src
 OBJ_DIR = obj
 
 SRC_FILES = \
+	PresidentialPardonForm.cpp\
+	RobotomyRequestForm.cpp\
 	ShrubberyCreationForm.cpp\
 	AForm.cpp\
 	Bureaucrat.cpp\

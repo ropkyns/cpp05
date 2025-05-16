@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: palu <palu@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 17:19:23 by palu              #+#    #+#             */
-/*   Updated: 2025/05/15 18:06:05 by palu             ###   ########.fr       */
+/*   Updated: 2025/05/16 16:28:15 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,15 @@ std::string PresidentialPardonForm::getTarget() const
 	return (_target);
 }
 
-std::ostream &operator<<(std::ostream &os, const PresidentialPardonForm &P)
+void PresidentialPardonForm::execute(Bureaucrat const &B) const
 {
-	os << "PresidentialPardonForm : " << P.getName() << " grade to sign is " << P.getSignGrade() << std::endl
-	<< "and  grade to execute is " << P.getExecGrade() << std::endl;
-	return (os);
+	if (this->getIsSigned() == true)
+	{
+		if (B.getGrade() <= this->getExecGrade())
+			std::cout << getTarget() << "has been pardoned by Zaphod Beeblerox." << std::endl;
+		else
+			throw GradeTooLowException();
+	}
+	else 
+		throw FormNotSigned();
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: palu <palu@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 16:57:19 by palu              #+#    #+#             */
-/*   Updated: 2025/05/15 17:02:31 by palu             ###   ########.fr       */
+/*   Updated: 2025/05/16 16:28:42 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,28 @@ std::string RobotomyRequestForm::getTarget() const
 	return (_target);
 }
 
-std::ostream& operator<<(std::ostream &os, const RobotomyRequestForm &R)
+void RobotomyRequestForm::execute(Bureaucrat const &B) const
 {
-	os << "RobotomyRequestForm : " << R.getName() << " grade to sign is " << R.getSignGrade() << std::endl
-	<< "and  grade to execute is " << R.getExecGrade() << std::endl;
-	return (os);
+	std::srand(std::time(0));
+	if (this->getIsSigned() == true)
+	{
+		if (B.getGrade() <= this->getExecGrade())
+		{
+			std::cout << "🤖 BRRRR BRRRR RRRB 🤖" << std::endl;
+			int i = rand() % 2;
+			if (i == 0)
+			{
+				std::cout << "🤖 Form : " << getTarget() << " has been robotomized 🤖" << std::endl;
+			}
+			else
+			{
+				std::cout << "🤖 Form : " << getTarget() << " has failed robotomisation 🤖" << std::endl;
+			}
+		}
+		else
+			throw GradeTooLowException();
+	}
+	else 
+		throw FormNotSigned();
 }
+

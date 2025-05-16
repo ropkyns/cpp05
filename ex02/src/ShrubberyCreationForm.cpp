@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: palu <palu@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 15:01:51 by palu              #+#    #+#             */
-/*   Updated: 2025/05/15 16:27:40 by palu             ###   ########.fr       */
+/*   Updated: 2025/05/16 16:15:23 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,30 @@ std::string ShrubberyCreationForm::getTarget() const
 	return (_target);
 }
 
-std::ostream& operator<<(std::ostream &os, const ShrubberyCreationForm &S)
+void ShrubberyCreationForm::execute(Bureaucrat const &B) const
 {
-	os << "ShrubberyCreationForm : " << S.getName() << " grade to sign is " << S.getSignGrade() << std::endl
-	<< "and  grade to execute is " << S.getExecGrade() << std::endl;
-	return (os);
+	if (this->getIsSigned() == true)
+	{
+		if (B.getGrade() <= this->getExecGrade())
+		{
+			std::ofstream outfile(this->getTarget().append("_shruberry").c_str());
+			outfile << "          &&& &&  & &&" << std::endl;
+			outfile << "      && &\\/&\\|& ()|/ @, &&" << std::endl;
+			outfile << "      &\\/(/&/&||/& /_/)_&/_&" << std::endl;
+			outfile << "   &() &\\/&|()|/&\\/ '%' & ()" << std::endl;
+			outfile << "  &_\\_&&_\\ |& |&&/&__%_/_& &&" << std::endl;
+			outfile << "&&   && & &| &| /& & % ()& /&&" << std::endl;
+			outfile << " ()&_---()&\\&\\|&&-&&--%---()~" << std::endl;
+			outfile << "     &&     \\|||" << std::endl;
+			outfile << "             |||" << std::endl;
+			outfile << "             |||" << std::endl;
+			outfile << "             |||" << std::endl;
+			outfile << "       , -=-~  .-^- _" << std::endl;
+		}
+		else
+			throw GradeTooLowException();
+	}
+	else 
+		throw FormNotSigned();
 }
+

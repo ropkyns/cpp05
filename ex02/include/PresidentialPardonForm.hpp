@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: palu <palu@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 17:19:12 by palu              #+#    #+#             */
-/*   Updated: 2025/05/15 17:21:50 by palu             ###   ########.fr       */
+/*   Updated: 2025/05/16 16:37:19 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PRESIDENTIALPARDONFORM_HPP
 # define PRESIDENTIALPARDONFORM_HPP
 
-#include "Bureaucrat.hpp"
+# include "Bureaucrat.hpp"
 
 class PresidentialPardonForm : public AForm
 {
@@ -31,7 +31,5 @@ class PresidentialPardonForm : public AForm
 		void execute(const Bureaucrat &B) const;
 
 };
-
-std::ostream &operator<<(std::ostream &os, PresidentialPardonForm &P);
 
 #endif

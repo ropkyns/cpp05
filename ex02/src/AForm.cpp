@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: palu <palu@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 15:38:39 by palu              #+#    #+#             */
-/*   Updated: 2025/05/15 16:36:01 by palu             ###   ########.fr       */
+/*   Updated: 2025/05/16 16:15:08 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,9 +83,14 @@ const char	*AForm::GradeTooLowException::what() const throw()
 	return ("Grade is too low");
 }
 
-std::ostream& operator<<(std::ostream &os, const AForm &F)
+const char	*AForm::FormNotSigned::what() const throw()
 {
-	os << "AForm : " << F.getName() << " grade to sign is " << F.getSignGrade() << std::endl
-	<< "and  grade to execute is " << F.getExecGrade() << std::endl;
+	return ("Form not signed");
+}
+
+std::ostream &operator<<(std::ostream &os, const AForm &F)
+{
+	os << "Form : " << F.getName() << " grade to sign is " << F.getSignGrade() << std::endl
+	<< "and grade to execute is " << F.getExecGrade() << std::endl;
 	return (os);
 }

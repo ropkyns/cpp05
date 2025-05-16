@@ -6,43 +6,114 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 16:22:15 by palu              #+#    #+#             */
-/*   Updated: 2025/05/12 17:24:42 by paulmart         ###   ########.fr       */
+/*   Updated: 2025/05/16 16:58:26 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Bureaucrat.hpp"
+#include "../include/ShrubberyCreationForm.hpp"
+#include "../include/RobotomyRequestForm.hpp"
+#include "../include/PresidentialPardonForm.hpp"
 
-int main()
+int main(void)
 {
-	try
-	{
-		Form form("Fire Toby Flenderson", 1, 5);
-		Bureaucrat Michael = Bureaucrat("Michael Scott", 2);
-		Michael.signForm(form);
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-	}
-	try
-	{
-		Form form("New deal !", 1, 5);
-		Bureaucrat Jim = Bureaucrat("Jim Halpert", 150);
-		Jim.signForm(form);
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-	}
-	try
-	{
-		Form form("amazing form you want to sign", 150, 130);
-		std::cout << form << std::endl;
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-	}
+	Bureaucrat		bureaucrat1("bureaucrat1", 130);
+	Bureaucrat		bureaucrat2("bureaucrat2", 40);
+	Bureaucrat		bureaucrat3("bureaucrat3", 5);
+	ShrubberyCreationForm shrubbery("test");
+	RobotomyRequestForm	robotomy("test");
+	PresidentialPardonForm	presidential("test");
+	AForm			*form = new ShrubberyCreationForm("test");
+	std::cout << std::endl;
 
+	std::cout << bureaucrat1 << std::endl;
+	std::cout << bureaucrat2 << std::endl;
+	std::cout << bureaucrat3 << std::endl;
+	std::cout << shrubbery << std::endl;
+	std::cout << robotomy << std::endl;
+	std::cout << presidential << std::endl;
+
+	try
+	{
+		bureaucrat1.signForm(shrubbery);
+	}
+	catch(const std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+	try
+	{
+		bureaucrat1.executeForm(shrubbery);
+	}
+	catch(const std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+	std::cout << std::endl;
+	try
+	{
+		bureaucrat2.signForm(robotomy);
+	}
+	catch(const std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+	try
+	{
+		bureaucrat2.executeForm(robotomy);
+	}
+	catch(const std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+	std::cout << std::endl;
+	try
+	{
+		bureaucrat3.signForm(presidential);
+	}
+	catch(const std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+	try
+	{
+		bureaucrat3.executeForm(presidential);
+	}
+	catch(const std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+	std::cout << std::endl;
+
+	delete form;
 	return (0);
 }
+	// try
+	// {
+	// 	Form form("Fire Toby Flenderson", 1, 5);
+	// 	Bureaucrat Michael = Bureaucrat("Michael Scott", 2);
+	// 	Michael.signForm(form);
+	// }
+	// catch(const std::exception& e)
+	// {
+	// 	std::cerr << e.what() << '\n';
+	// }
+	// try
+	// {
+	// 	Form form("New deal !", 1, 5);
+	// 	Bureaucrat Jim = Bureaucrat("Jim Halpert", 150);
+	// 	Jim.signForm(form);
+	// }
+	// catch(const std::exception& e)
+	// {
+	// 	std::cerr << e.what() << '\n';
+	// }
+	// try
+	// {
+	// 	Form form("amazing form you want to sign", 150, 130);
+	// 	std::cout << form << std::endl;
+	// }
+	// catch(const std::exception& e)
+	// {
+	// 	std::cerr << e.what() << '\n';
+	// }

@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: palu <palu@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 10:50:46 by paulmart          #+#    #+#             */
-/*   Updated: 2025/05/15 16:54:06 by palu             ###   ########.fr       */
+/*   Updated: 2025/05/16 16:37:17 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SHRUBBERRYCREATIONFORM_HPP
 # define SHRUBBERRYCREATIONFORM_HPP
 
-#include "Bureaucrat.hpp"
+# include "Bureaucrat.hpp"
 
 class ShrubberyCreationForm : public AForm
 {
@@ -28,10 +28,8 @@ class ShrubberyCreationForm : public AForm
 		ShrubberyCreationForm &operator=(const ShrubberyCreationForm &S);
 
 		std::string getTarget() const;
-		void execute(const Bureaucrat &B) const;
+		void	execute(Bureaucrat const &B) const;
 
 };
-
-std::ostream &operator<<(std::ostream &os, ShrubberyCreationForm &S);
 
 #endif
