@@ -6,7 +6,7 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 16:22:15 by palu              #+#    #+#             */
-/*   Updated: 2025/05/16 16:58:26 by paulmart         ###   ########.fr       */
+/*   Updated: 2025/05/19 15:15:39 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,32 +88,3 @@ int main(void)
 	delete form;
 	return (0);
 }
-	// try
-	// {
-	// 	Form form("Fire Toby Flenderson", 1, 5);
-	// 	Bureaucrat Michael = Bureaucrat("Michael Scott", 2);
-	// 	Michael.signForm(form);
-	// }
-	// catch(const std::exception& e)
-	// {
-	// 	std::cerr << e.what() << '\n';
-	// }
-	// try
-	// {
-	// 	Form form("New deal !", 1, 5);
-	// 	Bureaucrat Jim = Bureaucrat("Jim Halpert", 150);
-	// 	Jim.signForm(form);
-	// }
-	// catch(const std::exception& e)
-	// {
-	// 	std::cerr << e.what() << '\n';
-	// }
-	// try
-	// {
-	// 	Form form("amazing form you want to sign", 150, 130);
-	// 	std::cout << form << std::endl;
-	// }
-	// catch(const std::exception& e)
-	// {
-	// 	std::cerr << e.what() << '\n';
-	// }
