@@ -6,7 +6,7 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 16:22:15 by palu              #+#    #+#             */
-/*   Updated: 2025/05/12 17:24:42 by paulmart         ###   ########.fr       */
+/*   Updated: 2025/06/03 10:19:23 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int main()
 	{
 		std::cerr << e.what() << '\n';
 	}
+	std::cout << std::endl;
 	try
 	{
 		Form form("New deal !", 1, 5);
@@ -34,6 +35,7 @@ int main()
 	{
 		std::cerr << e.what() << '\n';
 	}
+	std::cout << std::endl;
 	try
 	{
 		Form form("amazing form you want to sign", 150, 130);

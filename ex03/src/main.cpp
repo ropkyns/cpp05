@@ -6,7 +6,7 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 16:22:15 by palu              #+#    #+#             */
-/*   Updated: 2025/05/19 16:06:42 by paulmart         ###   ########.fr       */
+/*   Updated: 2025/06/03 10:37:40 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int main(void)
 	Intern Mathis;
 	Bureaucrat Romain ("Romain", 2);
 	AForm *form = Mathis.makeForm("am I the GOAT", "Romain");
+	std::cout << std::endl;
 	if (!form)
 	{
 		form = Mathis.makeForm("PresidentialPardonForm", "Romain");
@@ -35,6 +36,7 @@ int main(void)
 	{
 		std::cerr << e.what() << std::endl;
 	}
+	std::cout << std::endl;
 	try
 	{
 		Romain.incrementGrade();
@@ -44,7 +46,7 @@ int main(void)
 	{
 		std::cerr << e.what() << std::endl;
 	}
+	std::cout << std::endl;
 	delete form;
 	return (0);
 }
-

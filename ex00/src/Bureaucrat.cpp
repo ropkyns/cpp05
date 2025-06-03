@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: palu <palu@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 12:44:25 by paulmart          #+#    #+#             */
-/*   Updated: 2025/05/05 17:49:10 by palu             ###   ########.fr       */
+/*   Updated: 2025/06/03 10:16:33 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name)
 		throw GradeTooHighException();
 	if (grade > 150)
 		throw GradeTooLowException();
-		_grade = grade;
+	_grade = grade;
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &B)
