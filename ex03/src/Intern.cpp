@@ -6,7 +6,7 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 12:43:38 by paulmart          #+#    #+#             */
-/*   Updated: 2025/05/19 16:08:13 by paulmart         ###   ########.fr       */
+/*   Updated: 2025/06/03 10:00:40 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,3 @@ AForm	*Intern::makeForm(std::string formName, std::string formTarget)
 	std::cerr << "This form does not exist, try \"ShrubberyCreationForm\", \"RobotomyRequestForm\" or \"PresidentialPardonForm\"" << std::endl;
 	return (NULL);
 }
-
